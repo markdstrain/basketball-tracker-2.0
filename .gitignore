@@ -47,3 +47,4 @@ chrome-user-data
 *.swp
 *.swo
 
+.DS_Store
