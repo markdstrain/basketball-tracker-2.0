@@ -1,0 +1,62 @@
+.standings-container{
+          background-image: url(../../assets/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
+          background-size: 2000px 900px;
+          width: 60%;
+          margin: auto;
+          min-height: 50em !important;
+          border: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: repeat;
+          border-image-slice: 500;
+          box-shadow: 0px 10px 20px black inset;
+          border-radius: .5em;
+}
+.conference-selector-container{
+          background-color: black;
+          height: 4em;
+          border-bottom: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: round;
+          border-image-slice: 500;
+          margin-bottom: 1.5em;
+}
+.conference-controls{
+          display: flex;
+          align-items: center;
+          height: 100%;
+}
+.team{
+          width: 35%;;
+}
+.standings-logo{
+          width: 2em;
+}
+.top{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+          padding-top: none !important;
+          padding-bottom: none;
+}
+.bottom{
+          color: lightcoral;
+          font-family: KGBrokenVesselsSketch;
+          margin-top: none;
+          margin-bottom: none;
+}
+.middle{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch;
+          margin-top: none;
+          margin-bottom: none;
+}
+.table-cell{
+          padding-top: .35em !important;
+          padding-bottom: .35em !important;
+}
+.table-row:hover {
+          background: darkcyan !important;
+          cursor: pointer;
+}
+.table-row:hover  td {
+          background: transparent !important;
+}

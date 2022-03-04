@@ -1,0 +1,115 @@
+@font-face {
+          font-family: KGBrokenVesselsSketch;
+          src: url(./../../assets/KGBrokenVesselsSketch.ttf);
+}
+.arrow{
+          height: 1.6em;
+          color: white;
+          filter: drop-shadow(2px 3px 3px black);
+}
+.calendar-button{
+          border: none !important;
+          color: white;
+}
+.calendar-button:hover{
+          cursor: pointer;
+}
+.calendar-container{
+          background-image: url(../../assets/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
+          background-size: 2000px 900px;
+          width: 75%;
+          margin: auto;
+          min-height: 38em !important;
+          border: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: repeat;
+          border-image-slice: 500;
+          box-shadow: 0px 10px 20px black inset;
+          border-radius: .5em;
+}
+.controls{
+          flex: 0 0 33.3333%;
+         background-color: black;
+
+}
+.date{
+          color: white;
+          font-family: KGBrokenVesselsSketch;
+          font-size: larger;
+          text-shadow: 2px 2px 4px black;
+}
+.date-container{
+          background-color: black;
+          height: 4em;
+          border-bottom: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: round;
+          border-image-slice: 500;
+          margin-bottom: 1.5em;
+}
+.date-controls{
+          display: flex;
+          align-items: center;
+          height: 100%;
+}
+.game-container{
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+}
+.game-container > * {
+          flex: 0 0 33.3333%;
+          border-bottom: 4px solid black;
+}
+.games-container{
+          display: flex;
+          justify-content: space-around;
+          width: 95%;
+          margin: auto;
+          
+}
+.loading{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+          padding-bottom: none;
+}
+.logo{
+          width: 3em;
+}
+.loser{
+          color: whitesmoke;
+}
+.schedule-header{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.team-box{
+          display: flex;
+          justify-content: space-between;
+          margin-left: 5%;
+          margin-right: 5%;
+}
+.team-name{
+          font-family: KGBrokenVesselsSketch;
+}
+.team-score{
+          font-family: KGBrokenVesselsSketch;
+}
+.time{
+          color: white;
+          font-size: larger;
+          font-family: KGBrokenVesselsSketch;
+          -webkit-text-stroke-width: .005px;
+          -webkit-text-stroke-color: black;
+          text-shadow: 2px 2px 2px rgb(125, 28, 155);
+}
+.warning{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+          border: none !important;
+}
+.winner{
+          color: goldenrod;
+}
+
+
