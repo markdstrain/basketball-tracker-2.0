@@ -35,12 +35,9 @@ def get_standings(conference="both"):
                     return Standings.both()
 
 
-@app.route('/schedule/<type>', methods=['GET'])
-def get_schedule(type):
-          if type == "all":
+@app.route('/schedule', methods=['GET'])
+def get_schedule():
                     return jsonify(Schedule.regular_season())
-          else:
-                    return jsonify(Schedule.team_schedule(type))
 
 @app.route('/playerleaders/<season>/<per>', methods= ['GET'])
 def get_articles(season, per):
@@ -51,6 +48,11 @@ def get_articles(season, per):
 def get_team_stats(season, per):
 
           return Leaders.team_leaders(season, per)
+
+@app.route('/roster/<teamId>', methods = ['GET'])
+def get_team_roster(teamId):
+          
+          return jsonify(Teams.roster(teamId))
 
 if __name__=="__main__":
           app.run(debug=True)

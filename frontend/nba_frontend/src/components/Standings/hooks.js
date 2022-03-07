@@ -28,10 +28,5 @@ const useConference=(standings, conference) =>{
            return[conf, getConf]
           
 }
-          
-          
-
-          
-
 
 export {useStandings, useConference};

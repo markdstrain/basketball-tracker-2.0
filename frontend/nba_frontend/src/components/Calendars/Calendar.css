@@ -19,7 +19,20 @@
           background-size: 2000px 900px;
           width: 75%;
           margin: auto;
-          min-height: 38em !important;
+          min-height: 11em !important;
+          border: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: repeat;
+          border-image-slice: 500;
+          box-shadow: 0px 10px 20px black inset;
+          border-radius: .5em;
+}
+.calendar-container-one-team{
+          background-image: url(../../assets/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
+          background-size: 2000px 900px;
+          width: 75%;
+          margin: auto;
+          min-height: 11.5em !important;
           border: 10px solid black;
           border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
           border-image-repeat: repeat;
@@ -45,7 +58,16 @@
           border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
           border-image-repeat: round;
           border-image-slice: 500;
-          margin-bottom: 1.5em;
+          margin-bottom: .25em;
+}
+.date-container-one{
+          background-color: black;
+          height: 4em;
+          border-bottom: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: round;
+          border-image-slice: 500;
+          margin-bottom: .25em;
 }
 .date-controls{
           display: flex;
@@ -89,9 +111,16 @@
           margin-left: 5%;
           margin-right: 5%;
 }
+.team-box-one{
+          display: flex;
+          justify-content: space-between;
+          margin-left: 30%;
+          margin-right: 30%;
+}
 .team-name{
           font-family: KGBrokenVesselsSketch;
 }
+
 .team-score{
           font-family: KGBrokenVesselsSketch;
 }

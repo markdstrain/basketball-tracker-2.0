@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from "react";
 import { useStandings, useConference } from './hooks';
+import {Link} from 'react-router-dom';
 import { library  } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
@@ -35,7 +36,7 @@ function Standings(){
                               setConference(true)
                     }
           }
-
+         
           return(
                     <div className="schedule">
                               <Video source={'../static/basketball.mp4'} />
@@ -74,7 +75,7 @@ function Standings(){
                                                   {!isLoading && conference === true &&
                                                             <Table className="table-borderless ">
                                                                       <thead>
-                                                                                <tr className="middle">
+                                                                                <tr className="table-head">
                                                                                           <td></td>
                                                                                           <td className="team">&nbsp; Team</td>
                                                                                           <td className="text-center" >W</td>
@@ -90,22 +91,24 @@ function Standings(){
                                                                       </thead>
                                                                       <tbody>
                                                                                 {conf.map(s=>                                                          
-                                                                                          <tr key={s["TeamID"]} className={s["PlayoffRank"]<7 ? "top table-row" : s["PlayoffRank"]<11 ? "middle table-row" : "bottom table-row" }>
-                                                                                                    <td className="table-cell pt-2">{s["PlayoffRank"]}</td>
-                                                                                                    <td className="table-cell">
-                                                                                                    <img className="standings-logo" alt="" src={`https://cdn.nba.com/logos/nba/${s['TeamID']}/primary/L/logo.svg`}/>
-                                                                                                    {s['TeamName']}
-                                                                                                    </td>
-                                                                                                    <td className="text-center table-cell">{s['WINS']}</td>
-                                                                                                    <td className="text-center table-cell">{s['LOSSES']}</td>
-                                                                                                    <td className="text-center table-cell">{s['WinPCT']}</td>
-                                                                                                    <td className="text-center table-cell">{s["ConferenceGamesBack"]}</td>
-                                                                                                    <td className="text-center table-cell">{s["ConferenceRecord"]}</td>
-                                                                                                    <td className="text-center table-cell">{s["HOME"]}</td>
-                                                                                                    <td className="text-center table-cell">{s["ROAD"]}</td>
-                                                                                                    <td className="text-center table-cell">{s['L10']}</td>
-                                                                                                    <td className="text-center table-cell">{s['strCurrentStreak']}</td>
-                                                                                          </tr>                                                                                                    
+                                                                                          <tr  key={s["TeamID"]} className={s["PlayoffRank"]<7 ? "top table-row" : s["PlayoffRank"]<11 ? "middle table-row" : "bottom table-row" }>
+                                                                                                              <td className="table-cell pt-2">{s["PlayoffRank"]}</td>
+                                                                                                              <td className="table-cell">
+                                                                                                                        <Link to={`/team/${s["TeamID"]}`} className={s["PlayoffRank"]<7 ? "top table-row" : s["PlayoffRank"]<11 ? "middle table-row" : "bottom table-row" }>
+                                                                                                                                  <img className="standings-logo" alt="" src={`https://cdn.nba.com/logos/nba/${s['TeamID']}/primary/L/logo.svg`}/>
+                                                                                                                                  {s['TeamName']}
+                                                                                                                        </Link>
+                                                                                                              </td>
+                                                                                                              <td className="text-center table-cell">{s['WINS']}</td>
+                                                                                                              <td className="text-center table-cell">{s['LOSSES']}</td>
+                                                                                                              <td className="text-center table-cell">{s['WinPCT']}</td>
+                                                                                                              <td className="text-center table-cell">{s["ConferenceGamesBack"]}</td>
+                                                                                                              <td className="text-center table-cell">{s["ConferenceRecord"]}</td>
+                                                                                                              <td className="text-center table-cell">{s["HOME"]}</td>
+                                                                                                              <td className="text-center table-cell">{s["ROAD"]}</td>
+                                                                                                              <td className="text-center table-cell">{s['L10']}</td>
+                                                                                                              <td className="text-center table-cell">{s['strCurrentStreak']}</td>
+                                                                                         </tr>                                                                                                    
                                                                                 )} 
                                                                       </tbody>
                                                             </Table>
@@ -113,7 +116,7 @@ function Standings(){
                                                    {!isLoading && conference === false &&
                                                             <Table className="table-borderless">
                                                                       <thead>
-                                                                                <tr className="middle">
+                                                                                <tr className="table-head">
                                                                                           <td></td>
                                                                                           <td className="team">&nbsp; Team</td>
                                                                                           <td className="text-center" >W</td>
@@ -132,8 +135,10 @@ function Standings(){
                                                                                           <tr key={s["TeamID"]} className={s["PlayoffRank"]<7 ? "top table-row" : s["PlayoffRank"]<11 ? "middle table-row" : "bottom table-row" }>
                                                                                                     <td className="table-cell pt-2">{s["PlayoffRank"]}</td>
                                                                                                     <td className="table-cell">
-                                                                                                    <img className="standings-logo" alt="" src={`https://cdn.nba.com/logos/nba/${s['TeamID']}/primary/L/logo.svg`}/>
-                                                                                                    {s['TeamName']}
+                                                                                                              <Link to={`/team/${s["TeamID"]}`} className={s["PlayoffRank"]<7 ? "top table-row" : s["PlayoffRank"]<11 ? "middle table-row" : "bottom table-row" }>
+                                                                                                                        <img className="standings-logo" alt="" src={`https://cdn.nba.com/logos/nba/${s['TeamID']}/primary/L/logo.svg`}/>
+                                                                                                                        {s['TeamName']}
+                                                                                                              </Link>
                                                                                                     </td>
                                                                                                     <td className="text-center table-cell pt-2">{s['WINS']}</td>
                                                                                                     <td className="text-center table-cell pt-2">{s['LOSSES']}</td>

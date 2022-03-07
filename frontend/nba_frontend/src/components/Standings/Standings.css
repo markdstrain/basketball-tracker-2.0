@@ -1,9 +1,9 @@
 .standings-container{
           background-image: url(../../assets/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
           background-size: 2000px 900px;
-          width: 60%;
+          width: 75%;
           margin: auto;
-          min-height: 50em !important;
+          min-height: 45em !important;
           border: 10px solid black;
           border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
           border-image-repeat: repeat;
@@ -37,11 +37,18 @@
           padding-top: none !important;
           padding-bottom: none;
 }
+.top:hover{
+          color: beige;
+          
+}
 .bottom{
           color: lightcoral;
           font-family: KGBrokenVesselsSketch;
           margin-top: none;
           margin-bottom: none;
+}
+.bottom:hover{
+          color:beige;
 }
 .middle{
           color: whitesmoke;
@@ -49,9 +56,20 @@
           margin-top: none;
           margin-bottom: none;
 }
+.middle:hover{
+          color: beige;
+         
+}
+.table-head{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch;
+          margin-top: none;
+          margin-bottom: none;
+
+}
 .table-cell{
-          padding-top: .35em !important;
-          padding-bottom: .35em !important;
+          padding-top: .20em !important;
+          padding-bottom: .20em !important;
 }
 .table-row:hover {
           background: darkcyan !important;
@@ -59,4 +77,8 @@
 }
 .table-row:hover  td {
           background: transparent !important;
+}
+.team-link{
+          text-decoration: none;
+          color: goldenrod;
 }

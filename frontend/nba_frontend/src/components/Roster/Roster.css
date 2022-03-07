@@ -1,0 +1,84 @@
+.roster-header{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.player-boxes{
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          flex-wrap: wrap;
+}
+.player-boxes > * {
+          width: 270px;
+          flex: 0 0 33.333333%;
+          margin-bottom: 1.5em;
+          
+          
+}
+.player-box{
+          display: flex;
+          flex-direction: row ;
+}
+.player-name{
+          font-family: KGBrokenVesselsSketch ;
+          color: goldenrod;
+          font-size: larger;
+          z-index: 10;
+          margin-left: -90px;
+}
+.player-photo{
+          width: 260px;
+}
+.position{
+          margin-left: -50px;
+}
+.position-title{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.player-position{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch ;
+}
+.age{
+          margin-left: -50px;
+}
+.age-title{
+          color:whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.age-player{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch ;
+}
+.height{
+          margin-left: -50px;
+}
+.height-title{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch;
+}
+.height-player{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+}         
+.weight{
+          margin-left: -50px;
+}
+.weight-title{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch;
+}
+.weight-player{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+}         
+.school{
+         color: goldenrod;
+         font-family: KGBrokenVesselsSketch;; 
+}
+.school-title{
+         margin-left: -50px; 
+         color: whitesmoke;
+         font-family: KGBrokenVesselsSketch;
+}

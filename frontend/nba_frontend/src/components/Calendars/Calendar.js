@@ -12,8 +12,8 @@ function Calendar(team){
           const value = moment();
           const startDay = value.clone().startOf("day");
           const [date, setDate] = useState(startDay);
-          const [ data, getData, isLoading ] = useData(team);
-          const[ filteredData, getFilteredData ] = useFilteredData(data, date.format("YYYYMMDD"))
+          const [ data, getData, isLoading ] = useData();
+          const[ filteredData, getFilteredData ] = useFilteredData(data, date.format("YYYYMMDD"), team)
 
 //populate or page with data and filtered data
           useEffect(()=>{
@@ -48,8 +48,8 @@ function Calendar(team){
                                         </h2>
                               </div>
 {/* Section Controls the Date Picker.  Arrows to move the date Backwards and Forwards Date Formatted with Moment.js*/}
-                              <div className="mt-3 text-center calendar-container">
-                                        <div className="date-container">
+                              <div className={(filteredData && filteredData.length > 1 )? "mt-3 text-center calendar-container" : "mt-3 text-center calendar-container-one-team"}>
+                                        <div className={(filteredData && filteredData.length > 1 )? "date-container" : "date-container-one"}>
                                                   <div className="date-controls">
                                                             <button className="calendar-button controls" onClick={minusDay}>
                                                                       <FontAwesomeIcon  className="arrow" icon="fa-solid fa-caret-left"/>
@@ -63,13 +63,13 @@ function Calendar(team){
                                                   </div>
                                         </div>
 {/*See if we got our data from the backend and if not shows the user that it's loading or goes to section to organize our data */}
-                                        <div className="games-container">
+                                        <div className={(filteredData && filteredData.length > 1)? "games-container": "text-center"}>
                                                   {isLoading &&           
                                                             <div className="loading"><p>Loading...</p></div>
                                                   }
-                                                  {!isLoading &&
+                                                  {!isLoading && 
  /** section is where most of the magic happens we call on our schedule and organize it in this container */
-                                                            <div className="game-container">
+                                                            <div className={(filteredData && filteredData.length > 1)? "game-container": "text-center"}>
 {/**here we see if there are any games for the day if not post No Games Scheduled else we move on */}
                                                                       {filteredData.length ===0 ? 
                                                                                 <div>
@@ -83,7 +83,7 @@ function Calendar(team){
 /**This will me our mapped boxes containing Team Logo Nickname Score or Scheduled Play Time */                      
                                                                                           <div key={games['gameId']} id={games['gameid']} className="game-div">
  {/**First Team Box Will Contain the Visiting Teams Info  */}                                                                                    
-                                                                                                    <div className="team-box"> 
+                                                                                                    <div className={(filteredData && filteredData.length > 1)? "team-box": "team-box-one"}> 
                                                                                                               <span> 
                                                                                                                          {/**Visiting Team Logo */}
                                                                                                                         <img className="logo" alt="" src={`https://cdn.nba.com/logos/nba/${games['awayTeam']['teamId']}/primary/L/logo.svg`}/>
@@ -116,7 +116,7 @@ function Calendar(team){
                                                                                                               </span>
                                                                                                     </div>
 {/**Second Team Box Will Contain the Home Teams Info */}                                                                                          
-                                                                                          <div className="team-box">
+                                                                                          <div className={(filteredData && filteredData.length > 1)? "team-box": "team-box-one"}>
                                                                                                     <span>
                                                                                                               {/**Home Team Logo */}
                                                                                                               <img className="logo" alt="" src={`https://cdn.nba.com/logos/nba/${games['homeTeam']["teamId"]}/primary/L/logo.svg`}/>
