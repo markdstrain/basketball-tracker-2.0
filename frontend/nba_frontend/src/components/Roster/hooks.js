@@ -6,7 +6,6 @@ const useRoster = (team) => {
           const [isLoading,changeLoading] = useState(true)
 
           const getRoster =async() => {
-                   console.log(team)
                     const roster= await Api.getRoster(team);
                     
                     loadRoster(() => roster["CommonTeamRoster"]);

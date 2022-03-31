@@ -34,7 +34,6 @@ const useFilteredData=(data, time, team) =>{
                               }else{
                                         const newDateData = datesData[0]['games'];
                                         const teamData = newDateData.filter(d=>  d['homeTeam']['teamId'] === parseInt(team.team) || d['awayTeam']['teamId'] === parseInt(team.team))
-
                                         setFilteredData(teamData)
                               }       
                     }  

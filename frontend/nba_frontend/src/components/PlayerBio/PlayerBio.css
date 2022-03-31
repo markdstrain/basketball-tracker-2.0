@@ -1,0 +1,124 @@
+.player-bio-header{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.bio-container{
+          display: flex;
+          flex-direction: row;
+          width: 80%;
+          height: 60% !important;
+          background-image: url(../../assets/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
+          border: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: repeat;
+          border-image-slice: 500;
+          box-shadow: 0px 10px 20px black inset;
+          border-radius: .5em;
+          margin: auto;
+}
+.player-bio-logo{
+          height: 18em;
+         width: 12%;
+         z-index: 10;
+}
+.player-bio-pic{
+          width:30%;
+          display: flex;
+          align-items: flex-end;
+          margin-left: -3em;
+}
+.player-bio-stats{
+          width:35%;
+          min-height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+}
+
+.player-bio-image{
+          margin-top: 1em;
+          margin-left: 1.7em;
+          width: 7em;
+}
+.player-bio-stats-box-1{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+          margin-top: 25%;
+}
+.player-bio-buttons{
+          width: 10%;
+          margin: auto;
+}
+.player-bio-first-name{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch ;
+}
+.player-bio-last-name{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch ;
+}
+nav ul {
+          list-style-type: none;
+          background-color: none !important;
+          margin: 0;
+          padding: 0;
+}
+nav ul li {
+          --c: goldenrod;
+          color: var(--c);
+          font-size: 16px;
+          border: 0.3em solid var(--c);
+          border-radius: 1.5em;
+          width: 8em;
+          height: 3em;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-family: sans-serif;
+          letter-spacing: 0.1em;
+          text-align: center;
+          line-height: 2.5em;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+          transition: 0.5s;
+          margin: 1em;
+}
+nav ul li span {
+          position: absolute;
+          width: 25%;
+          height: 100%;
+          background-color: var(--c);
+          transform: translateY(150%);
+          border-radius: 50%;
+          left: calc((var(--n) - 1) * 25%);
+          transition: 0.5s;
+          transition-delay: calc((var(--n) - 1) * 0.1s);
+          z-index: -1;
+          margin-top: 0;
+}
+nav ul li:hover {
+          color: whitesmoke;
+          cursor: pointer;
+          background-color: goldenrod;
+}
+      
+nav ul li:hover span {
+          transform: translateY(0) scale(2);
+          cursor: pointer;
+}
+      
+nav ul li span:nth-child(1) {
+          --n: 1;
+}
+      
+nav ul li span:nth-child(2) {
+          --n: 2;
+}
+      
+nav ul li span:nth-child(3) {
+          --n: 3;
+}
+      
+nav ul li span:nth-child(4) {
+          --n: 4;
+}

@@ -1,6 +1,7 @@
 from re import T
 from nba_api.stats.static import teams
 from nba_api.stats.endpoints import commonteamroster
+from nba_api.stats.endpoints import teamplayeronoffsummary
 from flask import jsonify
 
 class Teams():

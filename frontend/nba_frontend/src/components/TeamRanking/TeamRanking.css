@@ -1,0 +1,25 @@
+.team-ranking-header{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.ranking-table-container{
+        
+          
+}
+.ranking-table-head{
+          display: flex;
+          justify-content: space-around;
+          width: 100%
+          
+}
+.td{
+          flex: 0 0 33.33333%;
+          font-family: KGBrokenVesselsSketch ;
+          color: whitesmoke;
+          text-decoration: underline;
+}
+.body-td{
+          flex: 0 0 33.33333%;
+          font-family: KGBrokenVesselsSketch ;
+          color: goldenrod;
+}

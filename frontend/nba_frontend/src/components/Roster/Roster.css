@@ -5,15 +5,13 @@
 .player-boxes{
           display: flex;
           flex-direction: row;
-          justify-content: start;
+          justify-content: flex-start;
           flex-wrap: wrap;
 }
 .player-boxes > * {
           width: 270px;
-          flex: 0 0 33.333333%;
+          flex: 0 0 25%;
           margin-bottom: 1.5em;
-          
-          
 }
 .player-box{
           display: flex;
@@ -73,12 +71,23 @@
           color: goldenrod;
           font-family: KGBrokenVesselsSketch;
 }         
-.school{
-         color: goldenrod;
+.number{
+         margin-left: -50px;
          font-family: KGBrokenVesselsSketch;; 
 }
-.school-title{
-         margin-left: -50px; 
+.number-title{
          color: whitesmoke;
          font-family: KGBrokenVesselsSketch;
+}
+.number-player{
+          color:goldenrod;
+          font-family:  KGBrokenVesselsSketch;
+}
+.player-link{
+          text-decoration: none;
+          color: goldenrod;
+}
+.player-link:hover{
+          color: goldenrod;
+          text-decoration: underline;
 }

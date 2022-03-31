@@ -1,6 +1,6 @@
 import React from "react";
 import Calendar from "../Calendars/Calendar";
-import Video from "../VideoDiv/Video.js";
+import Video from "../Video/Video.js";
 
 
 

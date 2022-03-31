@@ -1,5 +1,6 @@
 import React, {  useEffect } from "react";
 import { useRoster } from './hooks';
+import {Link} from 'react-router-dom';
 import "./Roster.css";
 const genericPlayer = require('../../assets/genericPlayer.png')
 
@@ -14,7 +15,7 @@ function Roster(team){
           function addDefaultSrc(evt){
                     evt.target.src= genericPlayer;
           }
-          console.log(roster)
+          
           return(
                     
                     <div>
@@ -36,7 +37,9 @@ function Roster(team){
                                                                                 </div>
                                                                                 <div className="info">
                                                                                           <div className="player-name">
-                                                                                                    {player['PLAYER']}
+                                                                                                    <Link to={`/player/${player["PLAYER_ID"]}`}  className="player-link" >
+                                                                                                              {player['PLAYER']}
+                                                                                                    </Link>
                                                                                           </div>
                                                                                           <div className="position">
                                                                                                     <span className="position-title">
@@ -44,6 +47,14 @@ function Roster(team){
                                                                                                     </span>
                                                                                                     <span className="player-position">
                                                                                                               {player['POSITION']}
+                                                                                                    </span>
+                                                                                          </div>
+                                                                                          <div className="number">
+                                                                                                    <span className="number-title">
+                                                                                                              number:&nbsp;
+                                                                                                    </span>
+                                                                                                    <span className="number-player">
+                                                                                                              {player['NUM']}
                                                                                                     </span>
                                                                                           </div>
                                                                                           <div className="age">
@@ -69,12 +80,6 @@ function Roster(team){
                                                                                                     <span className="weight-player">
                                                                                                               {player['WEIGHT']}&nbsp;lb
                                                                                                     </span>
-                                                                                          </div>
-                                                                                          <div className="school-title">
-                                                                                                    alma mater:&nbsp;
-                                                                                          </div>
-                                                                                          <div className="school">
-                                                                                                    {player['SCHOOL']}
                                                                                           </div>
                                                                                 </div>
                                                                       </div>

@@ -1,0 +1,95 @@
+.team-leaders-header{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.team-leaders-container{
+          background-image: url(../../assets/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
+          background-size: 2000px 900px;
+          width: 80%;
+          margin: auto;
+          min-height: 11em !important;
+          border: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: repeat;
+          border-image-slice: 500;
+          box-shadow: 0px 10px 20px black inset;
+          border-radius: .5em;
+}
+.per-container{
+          background-color: black;
+          height: 4em;
+          margin-top: 0;
+          border-bottom: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: round;
+          border-image-slice: 500;
+          margin-bottom: .25em;
+}
+.controls{
+          flex: 0 0 33.3333%;
+         background-color: black;
+}
+.per-controls{
+          display: flex;
+          align-items: center;
+          height: 100%;
+}
+.per-button{
+          border: none !important;
+          color: white;
+}
+.per-button:hover{
+          cursor: pointer;
+}
+.per{
+          color: white;
+          font-family: KGBrokenVesselsSketch;
+          font-size: larger;
+          text-shadow: 2px 2px 4px black;
+}
+.stat-container{
+          background-color: black;
+          height: 4em;
+          border-bottom: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: round;
+          border-image-slice: 500;
+}
+.stat-controls{
+          display: flex;
+          align-items: center;
+          height: 100%;
+}
+.stat-button{
+          border: none !important;
+          color: white;
+}
+.stat-button:hover{
+          cursor: pointer;
+}
+.stat{
+          color: white;
+          font-family: KGBrokenVesselsSketch;
+          font-size: larger;
+          text-shadow: 2px 2px 4px black;
+}
+.rank{
+          width: 1%;
+}
+.player-row{
+          line-height: normal;
+}
+.table-container{
+          overflow-x: auto;
+}
+.up{
+          color: greenyellow;
+          text-decoration: underline;
+}
+.down{
+          color: red;
+          text-decoration: underline;
+}
+.clickable:hover{
+          cursor: pointer;
+}

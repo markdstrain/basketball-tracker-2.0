@@ -1,4 +1,5 @@
 from nba_api.stats.static import players
+from nba_api.stats.endpoints import commonplayerinfo
 from flask import jsonify
 
 class Players():
@@ -28,7 +29,13 @@ class Players():
           def player_names():
                     player_list = players.get_players()
                     return jsonify(player_list)
-
+          
+          """static method to return players bio"""
+          @staticmethod
+          def player_bio(player):
+                    players_bio = commonplayerinfo.CommonPlayerInfo(player_id=player).get_normalized_dict()
+                    players_bio = players_bio['CommonPlayerInfo']
+                    return players_bio
 
 
 

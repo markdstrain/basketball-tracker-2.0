@@ -1,0 +1,55 @@
+.news-header{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch ;
+}
+.article-container{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          row-gap: 5em;
+}
+.news-card{
+          background-image: url(../../assets/paulina-milde-jachowska-m6OzmW0GrPk-unsplash.jpg);
+          border: 10px solid black;
+          border-image-source: url(../../assets/flynn-fan-yXyeFm4TI9w-unsplash.jpg);
+          border-image-repeat: repeat;
+          border-image-slice: 500;
+          box-shadow: 0px 10px 20px black inset;
+          border-radius: .5em;
+          width: 30em;
+         display: flex;
+         flex-direction: column;
+         align-content: space-between;
+}
+.article-title{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+          text-decoration: underline; 
+}
+.article-body{
+          width: 50%;
+          margin:auto;
+}
+.article-script{
+          color: whitesmoke;
+          font-family: KGBrokenVesselsSketch;
+}
+.publisher{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+          text-decoration: underline;
+          margin-left: 1em;
+
+}
+.source-container{
+         
+          margin-bottom: 0;
+         
+}
+.article-date{
+          color: goldenrod;
+          font-family: KGBrokenVesselsSketch;
+          float: right;
+          margin-right: 1em;
+
+}

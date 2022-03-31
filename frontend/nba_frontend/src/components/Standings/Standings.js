@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { Table } from 'react-bootstrap';
-import Video from "../VideoDiv/Video";
+import Video from "../Video/Video";
 import './Standings.css';
 library.add(faCaretLeft, faCaretRight);
 

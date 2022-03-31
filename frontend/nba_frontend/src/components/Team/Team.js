@@ -1,6 +1,9 @@
 import React from "react";
 import Calendar from "../Calendars/Calendar";
 import Roster from "../Roster/Roster";
+import PlayerLeadersPerTeam from "../TeamLeaders/PlayerLeadersPerTeam";
+import TeamRanking from "../TeamRanking/TeamRanking";
+import News from "../News/News";
 import { useSelector } from "react-redux";
 import { useParams} from "react-router-dom";
 import './Team.css';
@@ -24,6 +27,9 @@ function Team(){
                                                   </h2>
                                                   <Calendar team={team.teamId} />
                                                   <Roster team = {team.teamId} />
+                                                  <PlayerLeadersPerTeam team={team.teamId}/>
+                                                  <TeamRanking team={team.teamId}/>
+                                                  <News query={team.teamId} querytype={"team"}/>
                                         </div>
                               
                               }

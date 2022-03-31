@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import Signup from './components/Login/Signup';
 import Standings from './components/Standings/Standings';
 import Team from './components/Team/Team';
+import Player from './components/Player/Player';
 import { getPlayers,
                 getTeams,
                 } from './actions/startup';
@@ -40,6 +41,7 @@ function App() {
                                         <Route exact path="/register" element={<Signup/>} />
                                         <Route exact path = "/standings" element ={<Standings/>}/>
                                         <Route exact path ="/team/:teamId" element={<Team/>}/>
+                                        <Route exact path="/player/:playerId" element={<Player/>} />
 
                               </Routes> 
                     </div>

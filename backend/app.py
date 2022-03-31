@@ -4,6 +4,7 @@ from league_leaders import Leaders
 from standings import Standings
 from teams import Teams
 from players import Players
+from news import News
 
 app = Flask(__name__)
 
@@ -23,7 +24,14 @@ def get_players(status):
                     return Players.player_names()
           else:
                     abort(404)
-                    
+
+
+
+
+
+@app.route('/players/bio/<player>', methods=['GET'])
+def get_players_bio(player):
+          return  jsonify(Players.player_bio(player))
           
 @app.route('/standings/<conference>', methods=['GET'])
 def get_standings(conference="both"):
@@ -39,10 +47,11 @@ def get_standings(conference="both"):
 def get_schedule():
                     return jsonify(Schedule.regular_season())
 
-@app.route('/playerleaders/<season>/<per>', methods= ['GET'])
-def get_articles(season, per):
-          
-          return Leaders.leaders(season, per)
+@app.route('/playerleaders/<season>/<per>/<teamId>', methods= ['GET'])
+def get_articles(season, per,teamId):
+          if teamId=='all':
+                    teamId=""
+          return Leaders.leaders(season, per,teamId)
           
 @app.route('/teamleaders/<season>/<per>', methods=['GET'])
 def get_team_stats(season, per):
@@ -53,6 +62,11 @@ def get_team_stats(season, per):
 def get_team_roster(teamId):
           
           return jsonify(Teams.roster(teamId))
+
+@app.route('/news/<query>', methods = ['GET'] )
+def get_news(query):
+         
+         return jsonify(News.get_query(query))
 
 if __name__=="__main__":
           app.run(debug=True)
